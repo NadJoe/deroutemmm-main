@@ -5,7 +5,6 @@ const vx = document.getElementById('vx');
 const vw = document.getElementById('vw');
 const fob = document.getElementById('fob');
 
-const Outcm = document.getElementById('cm');
 
 
 const inputs = document.querySelectorAll('.div-colonnes-1 ul li input');
@@ -37,22 +36,9 @@ let efuel;
 console.log(rm.value);
 console.log(vx.value);
 ///////////******************  calcule des composants *************//////////////////////////////////
-fb1 = 0.55;
-alpha = (rm.value)-(vx.value);
-console.log(alpha);
-xm = vw.value*fb1;
-d=xm*Math.sin(alpha);
-cm =rm.value+d;
-ve = vw.value*Math.cos(alpha);
-vt = vw.value*Math.sin(alpha);  //const vt = vw+*sin(alpha)
-vs = vp-ve;
-fb2 = 60/vs;
-tav=fb2*distance.value;
-tsv = fb1 *distance.value;
-Conso_L_min = (conso_L_h)/60;
-efuel = tav*(conso_L_min);
 
-Outcm.value = cm;
+
+//Outcm.value = cm;
 
 
 calcule(conversion(distance,rm,vx,vw,fob));
